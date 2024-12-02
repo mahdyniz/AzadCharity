@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzadCharity.Admin", "AzadCharity.Admin\AzadCharity.Admin.csproj", "{145898BF-C924-41C6-8EC8-316A30CE952E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzadCharity.DAL", "AzadCharity.DAL\AzadCharity.DAL.csproj", "{5F61C551-29AC-4631-9299-076833D58E9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzadCharity.Models", "AzadCharity.Models\AzadCharity.Models.csproj", "{BC5C7724-B017-47A2-8352-E3F48155D37E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{145898BF-C924-41C6-8EC8-316A30CE952E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{145898BF-C924-41C6-8EC8-316A30CE952E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{145898BF-C924-41C6-8EC8-316A30CE952E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F61C551-29AC-4631-9299-076833D58E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F61C551-29AC-4631-9299-076833D58E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F61C551-29AC-4631-9299-076833D58E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F61C551-29AC-4631-9299-076833D58E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC5C7724-B017-47A2-8352-E3F48155D37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5C7724-B017-47A2-8352-E3F48155D37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5C7724-B017-47A2-8352-E3F48155D37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5C7724-B017-47A2-8352-E3F48155D37E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
