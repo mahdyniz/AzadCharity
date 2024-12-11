@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AzadCharity.DAL.Repositories
 {
-    internal class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         private readonly CharityContext _context;
         private readonly DbSet<T> _dbSet;
@@ -49,7 +49,7 @@ namespace AzadCharity.DAL.Repositories
 
             if (entity == null)
             {
-                throw new Exception($"The charity case with id : {id} is null/ not found");
+                throw new Exception($"The entity with id : {id} is null/ not found");
             }
             return entity;
         }
