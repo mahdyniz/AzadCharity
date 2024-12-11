@@ -11,6 +11,6 @@ namespace AzadCharity.DAL.Repositories
     {
         ICharityCaseRepository CharityCase{ get; }
 
-        void SaveAsync();
+        Task SaveAsync();
     }
 }

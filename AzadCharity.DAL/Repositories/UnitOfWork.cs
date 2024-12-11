@@ -17,9 +17,9 @@ namespace AzadCharity.DAL.Repositories
             CharityCase = new CharityCaseRepository(_context);
         }
 
-        public void SaveAsync()
+        public async Task SaveAsync()
         {
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
     }
 }
