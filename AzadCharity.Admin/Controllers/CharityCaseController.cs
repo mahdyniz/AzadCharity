@@ -34,5 +34,54 @@ namespace AzadCharity.Admin.Controllers
 
             return View(charityCase);
         }
+        public IActionResult Edit(int id)
+        {
+            var charityCase = _unitOfWork.CharityCase.GetById(id);
+            if (charityCase == null)
+            {
+                return NotFound();
+            }
+            return View(charityCase);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, CharityCase charityCase)
+        {
+            if (id != charityCase.Id)
+            {
+                return BadRequest();
+            }
+
+            if (ModelState.IsValid)
+            {
+                _unitOfWork.CharityCase.Update(charityCase);
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(charityCase);
+        }
+        public IActionResult Delete(int id)
+        {
+            var charityCase = _unitOfWork.CharityCase.GetById(id);
+            if (charityCase == null)
+            {
+                return NotFound();
+            }
+
+            return View(charityCase);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var charityCase = _unitOfWork.CharityCase.GetById(id);
+            if (charityCase != null)
+            {
+                _unitOfWork.CharityCase.Delete(id);
+                _unitOfWork.Save();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

@@ -31,7 +31,6 @@ namespace AzadCharity.Models.Models
         public DateTime CreatedDate { get; set; }
 
         // 🔹 Add Category Relationship
-        [Required(ErrorMessage = "Category is required.")]
         public int? CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
