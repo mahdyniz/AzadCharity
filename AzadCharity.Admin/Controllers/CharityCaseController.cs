@@ -12,9 +12,9 @@ namespace AzadCharity.Admin.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var allCharityCases = await _unitOfWork.CharityCase.GetAllAsync();
+            var allCharityCases = _unitOfWork.CharityCase.GetAll();
             return View(allCharityCases);
         }
         public IActionResult Create()
@@ -22,13 +22,13 @@ namespace AzadCharity.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(CharityCase charityCase)
+        public IActionResult Create(CharityCase charityCase)
         {
             if (ModelState.IsValid == true)
             {
                 charityCase.CreatedDate = DateTime.Now;
-                await _unitOfWork.CharityCase.AddAsync(charityCase);
-                await _unitOfWork.SaveAsync();
+                _unitOfWork.CharityCase.Add(charityCase);
+                _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
 

@@ -19,14 +19,14 @@ namespace AzadCharity.DAL.Repositories
             _context = context;
             _dbSet = context.Set<T>();
         }
-        public async Task AddAsync(T entity)
+        public void Add(T entity)
         {
-            await _dbSet.AddAsync(entity);
+            _dbSet.Add(entity);
         }
 
-        public async Task DeleteAsync(int id)
+        public void Delete(int id)
         {
-            var entity = await GetByIdAsync(id);
+            var entity = GetById(id);
 
             if (entity == null)
             {
@@ -36,16 +36,16 @@ namespace AzadCharity.DAL.Repositories
 
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public IEnumerable<T> GetAll()
         {
-            var entities = _dbSet.ToListAsync();
+            var entities = _dbSet.ToList();
 
-            return await entities;
+            return entities;
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public T GetById(int id)
         {
-            var entity = await _dbSet.FindAsync(id);
+            var entity = _dbSet.Find(id);
 
             if (entity == null)
             {
@@ -54,7 +54,7 @@ namespace AzadCharity.DAL.Repositories
             return entity;
         }
 
-        public async Task UpdateAsync(T entity)
+        public void Update(T entity)
         {
             if (entity == null)
             {

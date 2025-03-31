@@ -20,4 +20,12 @@
     <ProjectReference Include="..\AzadCharity.Models\AzadCharity.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\CharityCase\Create.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\CharityCase\Create.cshtml" />
+  </ItemGroup>
+
 </Project>
